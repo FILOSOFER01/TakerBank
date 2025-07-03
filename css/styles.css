@@ -1,0 +1,335 @@
+/* RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  /* Navbar Brand Styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
+
+/* Nav Links Styling */
+.navbar-nav .nav-link {
+  color: #ddd !important;
+  font-weight: 500;
+  margin-left: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Underline Animation on Hover */
+.navbar-nav .nav-link::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Make sure toggler icon stays white */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(100%);
+}
+
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  background-color: #014b84;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.branding h1 {
+  font-size: 1.5rem;
+}
+
+/* NAVIGATION */
+nav {
+  flex-basis: 100%;
+  display: none;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-menu {
+  list-style: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+  background-color: white;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 100;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu li a {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+}
+
+/* DESKTOP STYLES */
+@media (min-width: 768px) {
+  nav {
+    display: block !important;
+    flex-basis: auto;
+    position: static;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* HERO SECTION */
+.get-started {
+  background: url('../Assets/get-started.jpg') center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.get-started-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #014b84;
+}
+
+.get-started-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #014b84;
+}
+
+.btn-primary {
+  background-color: #0070e0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005bb5;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background-color: #fff;
+}
+
+.feature {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  color: #004481;
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #002d5a;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-column h2,
+.footer-column h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: #c9d6df;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+/* CUSTOM NAVBAR STYLES */
+.custom-navbar {
+  background-color: #004481; /* Matches your site’s main color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* subtle depth */
+}
+
+.navbar-nav .nav-link {
+  color: #e6f0f5 !important; /* lighter text for better contrast */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link::after {
+  background-color: #ffffff; /* white underline on hover */
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
